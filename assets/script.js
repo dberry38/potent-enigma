@@ -1,0 +1,6 @@
+userSearch = $("#cityname")
+searchButton = $(".btn")
+recentList = $("#recent-list")
+resultsFor = $("#results-for")
+currentConditions = $("#current-conditions")
+fiveDay = $("#5-day")

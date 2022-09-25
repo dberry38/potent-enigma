@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link defer rel="text/javascript" href="./assets/script.js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link defer rel="text/javascript" href="./assets/script.js" />
     <title>Simple Weather App</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Figuring out how to generate all the HTML in JS last time, while super fun, might not be the best way every time. -->
     <header class="container">
-        <h1>Real Simple Weather</h1>
-        <nav>
-            <ul>
-                <li>sample nav item</li>
-                <li>sample nav item</li>
-                <li>sample nav item</li>
-            </ul>
-        </nav>
+      <h1>Real Simple Weather</h1>
     </header>
-    <main class="container">
-        
 
+    <main class="flex-row justify-space-between">
+      <div class="col-12 col-md-4">
 
+        <!-- I cunningly borrow some code from lesson 21, week 6 and adjust it to my purposes -->
+        <div class="card">
+          <h3 class="card-header text-uppercase">Search For A City</h3>
+          <form id="user-form" class="card-body">
+            <label class="form-label" for="username">Enter Location</label>
+            <input
+              name="cityname" id="cityname" type="text" autofocus="true" class="form-input"
+            />
+            <button type="submit" class="btn">Search</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3 class="card-header text-uppercase">Recently Viewed</h3>
+          <div id="recently-viewed" class="card-body">
+            <ul id="recent-list">
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-8">
+          <h2 class="subtitle">
+            Showing Results for: <span id="results-for"></span>
+          </h2>
+          <div id="current-conditions" class="results-group">
+
+          </div>
+          <div id="5-day" class="results-group">
+
+          </div>
+        </div>
+
+      </div>
     </main>
-    
-</body>
-<footer>
+  </body>
+
+  <footer>
     <span>This page was made possible by Openweather</span>
+    <br />
     <span>very cool and very legal</span>
-</footer>
+  </footer>
 </html>
