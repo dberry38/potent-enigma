@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./assets/style.css" />
-
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <title>Simple Weather App</title>
   </head>
   <body>
@@ -35,32 +35,45 @@
           <h3 class="card-header text-uppercase">Recently Viewed</h3>
           <div id="recently-viewed" class="card-body">
             <ul id="recent-list">
+              <li>Seattle</li>
+              <li>Tacoma</li>
 
             </ul>
           </div>
         </div>
-
-        <div class="col-12 col-md-8">
-          <h2 class="subtitle">
-            Showing Results for: <span id="results-for"></span>
-          </h2>
-          <div id="current-conditions" class="results-group">
-
-          </div>
-          <div id="five-day" class="results-group">
-
-          </div>
-        </div>
-
       </div>
+
+      <div class="col-12 col-md-8">
+        <h2 class="subtitle">
+          Showing Results for: <span id="results-for"></span>
+        </h2>
+        <div id="current-conditions" class="results-group">
+          <div>Current temp: <span id="current-temp"></span></div>
+          <div>Feel like: <span id="current-feel"></span></div>
+          <div>Today's high: <span id="today-high"></span></div>
+          <div>Today's low: <span id="today-low"></span></div>
+          <div>Humidity: <span id="today-humidity"></span></div>
+          <div>Cloud cover: <span id="current-sky-cond"></span></div>
+          <div>Wind speed: <span id="current-wind-spd"></span></div>
+          <div>Wind direction: <span id="current-wind-dir"></span></div>
+
+
+        </div>
+        <div id="five-day" class="results-group">
+
+        </div>
+      </div>
+
     </main>
     <footer>
       <span>This page was made possible by Openweather</span>
       <br />
       <span>very cool and very legal</span>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
     <script type="text/javascript" src="./assets/script.js"></script>
+    
   </body>
 
 
